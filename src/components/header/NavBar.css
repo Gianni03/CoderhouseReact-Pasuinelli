@@ -1,0 +1,33 @@
+.menu {
+  width: 100vw;
+  height: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 0 7px #ccc;
+  position: sticky;
+}
+.menu__logo {
+  margin-left: 5em;
+}
+.menu__logo img{
+  width: 3em;
+  padding: 1rem;
+}
+.menu__lista ul{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 4rem;
+
+}
+.menu__lista li{
+  list-style: none;
+  margin-right: 4em;
+}
+.menu__lista--cart{
+  font-size: 20px;
+}
+.menu__lista--qty{
+  font-size: 18px;
+  vertical-align: top;
+}

@@ -1,0 +1,31 @@
+.itemCount{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.itemCount__cantidad{
+  display: flex;
+  padding: 5px;
+  margin: 15px 0;
+}
+.itemCount__cantidad span{
+  font-size: 2.5rem;
+  color: #f9f9f9;
+  background-color: #c6c5c5;
+  border-radius: 50%;
+  width: 55px;
+  cursor: pointer;
+}
+.itemCount__cantidad span:hover{
+  background-color: #060606ae;
+}
+.itemCount__contador{
+  margin:  0 1.5rem;
+  font-size: 2rem;
+  
+}
+
+.itemCount__comprar{
+  text-align: center;
+}
