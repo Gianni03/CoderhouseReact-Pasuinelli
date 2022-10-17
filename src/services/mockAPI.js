@@ -120,6 +120,8 @@ export default function getItems() {
     }, 2000);
   });
 }
+
+
 export function getItem(idItem) {
 
   return new Promise((resolve, reject) => {
@@ -139,6 +141,19 @@ export function getItemByCategory(cat){
     
       return item.categoria === cat;
     
+    });
+
+    if (itemFind) resolve(itemFind);
+    else reject(new Error("item no encontrado"));
+  });
+}
+
+
+export function getItemStock(ItemStock) {
+
+  return new Promise((resolve, reject) => {
+    let itemFind = data.find((item)=> {
+      return item.stock === Number(ItemStock)
     });
 
     if (itemFind) resolve(itemFind);

@@ -2,18 +2,30 @@ import React, { useState, useEffect } from 'react'
 import './item.css'
 import getItems from '../../services/mockAPI'
 import ItemList from './ItemList';
+import { useParams } from 'react-router-dom'
+import { getItemByCategory } from '../../services/mockAPI'
 
 
 function ItemListContainer() {
 
   let [data, setData] = useState([]);
 
-  useEffect(
-    () => {
-    getItems()
-    .then((respuestaDatos) => setData(respuestaDatos));
-  }, []);
+  const { cat } = useParams();
+  
 
+  useEffect(() => {
+    if (cat === undefined){
+      
+      getItems().then((respuestaDatos) => setData(respuestaDatos));
+    
+    } else {
+
+      getItemByCategory(cat).then((respuestaDatos) => setData(respuestaDatos));
+    
+    }
+  }, [cat]);
+
+  
   return (
     <div className='main'>
       

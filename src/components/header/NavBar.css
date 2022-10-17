@@ -23,6 +23,14 @@
 .menu__lista li{
   list-style: none;
   margin-right: 4em;
+  
+}
+.menu__lista a{
+  text-decoration: none;
+  color: black;
+}
+.menu__lista li a:hover{
+  border-bottom: 2px solid black;
 }
 .menu__lista--cart{
   font-size: 20px;

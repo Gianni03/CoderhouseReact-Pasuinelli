@@ -4,6 +4,7 @@ import "./button.css"
 function Button(props) {
 
 function handleClick(){
+  props.onClick();
   console.log("apretado el boton")
 }
 

@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState } from 'react'
 import './itemCount.css'
 import Button from '../Button/Button'
 
 
+function ItemCount({onAddToCart}) {
 
-function ItemCount(props, {onAddToCart}) {
+
 
   const [contador, setContador] = useState(1);
   
@@ -20,7 +21,7 @@ function ItemCount(props, {onAddToCart}) {
   const suma = () => {
     console.log("suma");
 
-    if (contador >= 1 && contador < props.stock) {
+    if (contador >= 1 && contador < 6) {
       setContador(contador + 1);
     } else {
       alert("Estas comprando todo lo que tenemos!!!");
@@ -35,7 +36,7 @@ function ItemCount(props, {onAddToCart}) {
         <span onClick={suma}>+</span>
       </div>
       <div className="ItemCount__comprar">
-        <Button onClick={ () => onAddToCart(contador)}>Comprar</Button>
+        <Button onClick={ () => onAddToCart(contador)}>Agregar</Button>
       </div>
     </div>
   )
