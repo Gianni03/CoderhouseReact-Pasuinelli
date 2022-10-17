@@ -1,16 +1,18 @@
-import React, { useState} from "react";
+import React, { useState, useContext} from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import './itemDetail.css'
 import { Link } from "react-router-dom";
 import Cart from '../Cart/Cart'
+import { cartContext } from '../context/CartContext';
 
 function ItemDetail(props) {
 
   const [isInCart, setIsInCart] = useState(false)
+  const { addItem } = useContext(cartContext);
 
   function handleOnAddToCart(contador){
     console.log(`agregaste ${contador} unidades al carrito`);
-    // addItem(props, contador);
+    addItem(props, contador);
     setIsInCart(true);
     
   }
@@ -35,7 +37,7 @@ function ItemDetail(props) {
           <div className="item__detail--price">
             <h4>$ {props.price}</h4>
           </div>
-          { !isInCart ? <ItemCount onAddToCart={handleOnAddToCart}/> : <Link to={<Cart/>}>Finalizar</Link> }
+          { !isInCart ? <ItemCount onAddToCart={handleOnAddToCart}/> : <Link to={'/cart'}>Finalizar</Link> }
             
         </div>
 

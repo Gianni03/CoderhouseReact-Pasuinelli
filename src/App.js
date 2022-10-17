@@ -1,4 +1,3 @@
-
 import './App.css';
 import NavBar from "./components/header/NavBar";
 import Banner from './components/hero/Banner';
@@ -6,9 +5,11 @@ import ItemListContainer from "./components/Productos/ItemListContainer";
 import ItemdDetailContainer from './components/ItemDetail/ItemdDetailContainer';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import Cart from './components/Cart/Cart'
+import CartContextProvider from "./components/context/CartContext";
 
 function App() {
   return (
+    <CartContextProvider>
   <BrowserRouter>
     <div className="App">
       <header className="App-header">
@@ -45,6 +46,7 @@ function App() {
     
     </div>
   </BrowserRouter>
+  </CartContextProvider>
   );
 }
 
