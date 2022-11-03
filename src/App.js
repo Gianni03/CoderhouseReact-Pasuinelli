@@ -30,8 +30,8 @@ function App() {
             <ItemdDetailContainer/>
           }/>
           <Route path='/cart' element={
-
-          <Cart/>}/>
+            <Cart/>}
+          />
           
           <Route path='*' element={
             <>

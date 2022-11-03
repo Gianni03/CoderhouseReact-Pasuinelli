@@ -1,10 +1,13 @@
 import React from 'react'
 import './cart.css'
-import { cartContext } from '../context/CartContext';
+// import { cartContext } from '../context/CartContext';
 
 function Cart() {
   return (
-    <div>{cartContext}</div>
+    <>
+    <div>CART</div>
+    {/* <div>{cartContext}</div> */}
+    </>
   )
 }
 
