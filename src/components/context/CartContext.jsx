@@ -49,7 +49,7 @@ export default function CartContextProvider({ children }) {
   }
   //borrar un producto del carrito
   function deleteItem(id) {
-    return setCart(cart.filter((product) => product.id !== id));
+    return setCart(cart.filter(product => product.id !== id));
   }
 
   //total carrito
