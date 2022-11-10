@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 
 function CartWidget() {
 
-  const { cart } = useContext(cartContext);
+  const { getTotalItemsInCart } = useContext(cartContext);
 
   return (
     <Link to={"/cart"}>
     <div className='menu__lista--cart'>
     <BiCartAlt/>
-    <span className='menu__lista--qty'>{cart.length}</span></div>
+    <span className='menu__lista--qty'>{getTotalItemsInCart()}</span>
+    </div>
     </Link>
     
   )
