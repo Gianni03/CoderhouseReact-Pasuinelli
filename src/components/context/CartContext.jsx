@@ -44,7 +44,7 @@ export default function CartContextProvider({ children }) {
   }
 
   //vaciar carrito
-  function emptyCard() {
+  function emptyCart() {
     return setCart([]);
   }
   //borrar un producto del carrito
@@ -65,7 +65,7 @@ export default function CartContextProvider({ children }) {
         addItem,
         getTotalItemsInCart,
         isInCart,
-        emptyCard,
+        emptyCart,
         deleteItem,
         getItemsTotalPrice,
       }}

@@ -12,7 +12,7 @@ function CartWidget() {
     <Link to={"/cart"}>
     <div className='menu__lista--cart'>
     <BiCartAlt/>
-    <span className='menu__lista--qty'>{getTotalItemsInCart()}</span>
+    <span className='menu__lista--qty'>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span>
     </div>
     </Link>
     
