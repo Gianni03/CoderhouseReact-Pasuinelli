@@ -7,13 +7,6 @@ const cartContext = createContext();
 export default function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  // function addItem(props, contador){
-  //   let newCart = [...cart];
-
-  //   newCart.push(props, contador);
-  //   setCart(newCart);
-  //   console.log("mensaje desde context",props , contador)
-  // }
 
   function addItem(item, values) {
     const newItem = {
@@ -45,7 +38,7 @@ export default function CartContextProvider({ children }) {
 
   //vaciar carrito
   function emptyCart() {
-    return setCart([]);
+    return setCart([0]);
   }
   //borrar un producto del carrito
   function deleteItem(id) {

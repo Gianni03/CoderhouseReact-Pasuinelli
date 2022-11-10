@@ -22,7 +22,7 @@ function Cart() {
 
           <img src={item.img} alt={item.title}/>
           <p>{item.price}</p>
-          <Button onClick={() => deleteItem()}>quitar</Button>
+          <Button onClick={() => deleteItem(item.id)}>quitar</Button>
         </div>
         ))}
       </div>
