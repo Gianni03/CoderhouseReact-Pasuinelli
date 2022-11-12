@@ -7,7 +7,12 @@ import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import Cart from './components/Cart/Cart'
 import CartContextProvider from "./components/context/CartContext";
 
+
 function App() {
+
+  
+
+
   return (
     <CartContextProvider>
   <BrowserRouter>

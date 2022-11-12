@@ -1,0 +1,24 @@
+.cart{
+  display: flex;
+  flex-direction: column;
+border: 1px solid black;
+}
+.cart__card{
+  width: 80%;
+  display: flex;
+  margin: 25px auto;
+  justify-content: space-around;
+  border-bottom: 4px solid black;
+}
+.cart__img{
+  width: 6rem;
+  vertical-align: middle;
+}
+.cart__titulo, .cart__price{
+  align-items: center;
+  justify-content: center;
+}
+.cart__empty{
+  font-size: 30px;
+  padding: 8rem;
+}

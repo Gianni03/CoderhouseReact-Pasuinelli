@@ -11,23 +11,25 @@ function Cart() {
 
 
   if (cart.length === 0) {
-    return <div>Tu carrito está vacio...</div>;
+    return <div className='cart__empty'>Tu carrito está vacio...</div>;
   }
   return (
     <>
-      <div>
+      <div className='cart'>
       {cart.map((item) => (
-        <div>
-          <h3>{item.title}</h3>
+        <div className='cart__card'>
+          <h3 className='cart__titulo'>{item.title}</h3>
 
-          <img src={item.img} alt={item.title}/>
-          <p>{item.price}</p>
+          <img className='cart__img' src={item.img} alt={item.title}/>
+          <p className='cart__price'>{item.price}</p>
           <Button onClick={() => deleteItem(item.id)}>quitar</Button>
         </div>
         ))}
       </div>
-          <strong>{getItemsTotalPrice()}</strong>
-          <Button onClick={() => emptyCart()}>vaciar carrito</Button>
+          <div>
+            <strong className='cart__total'>{getItemsTotalPrice()}</strong>
+            <Button onClick={() => emptyCart()}>vaciar carrito</Button>
+          </div>
     </>
   )
 }

@@ -10,7 +10,7 @@ function ItemCount({onAddToCart}) {
   const [contador, setContador] = useState(1);
   
   const resta = ()=> {
-    console.log("resta");
+    
     if (contador > 1) {
       setContador(contador - 1);
     } else {
@@ -19,7 +19,7 @@ function ItemCount({onAddToCart}) {
   }
 
   const suma = () => {
-    console.log("suma");
+    
 
     if (contador >= 1 && contador < 6) {
       setContador(contador + 1);

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import { getItem } from '../../services/mockAPI'
+// import { getItem } from '../../services/mockAPI'
+import { getItem } from '../../services/firestore'
 import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail';
 
@@ -7,7 +8,7 @@ import ItemDetail from './ItemDetail';
 function ItemdDetailContainer() {
   let [item, setItem] = useState({});
 
-console.log("params", useParams());
+
 
 const { itemId } = useParams(); 
 

@@ -38,7 +38,7 @@ export default function CartContextProvider({ children }) {
 
   //vaciar carrito
   function emptyCart() {
-    return setCart([0]);
+    return setCart([]);
   }
   //borrar un producto del carrito
   function deleteItem(id) {

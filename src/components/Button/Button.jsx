@@ -5,7 +5,7 @@ function Button(props) {
 
 function handleClick(){
   props.onClick();
-  console.log("apretado el boton")
+  
 }
 
   return (

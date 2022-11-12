@@ -11,7 +11,7 @@ function ItemDetail(props) {
   const { addItem } = useContext(cartContext);
 
   function handleOnAddToCart(contador){
-    console.log(`agregaste ${contador} unidades al carrito`);
+    
     addItem(props, contador);
     setIsInCart(true);
     
